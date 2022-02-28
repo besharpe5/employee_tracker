@@ -27,7 +27,7 @@ VALUES
     ("Junior Software Developer - Back End", 65500, 3), -- 12
     ("Software Developer - Front End", 75500, 3), -- 13
     ("Software Developer - Back End", 75500, 3), -- 14
-    ("Senior Software Developer - Full Stack", 92000), -- 15
+    ("Senior Software Developer - Full Stack", 92000, 3), -- 15
     ("Engineering Manager", 110000, 3), -- 16
     ("Support Representative", 40000, 4), -- 17
     ("Support Representative II", 40000, 4), -- 18
@@ -63,7 +63,7 @@ VALUES
     ("Zoe", "Short", 2, 4), -- SMB Sales Representative
     ("Kaitlyn", "Bass", 3, 5), -- Enterprise Sales Representative
     ("Ava", "Whalen", 4, 39), -- Sales Manager - SMB
-    ("Andrew", "Casey", 5, 39) -- Sales Manager - Enterprise
+    ("Andrew", "Casey", 5, 39), -- Sales Manager - Enterprise
     ("Bryson", "Hicks", 6, 10), -- Social Media Manager
     ("Mila", "Shepard", 7, 10), -- SEO Specialist
     ("Porter", "Sharpe", 8, 10), -- Public Relations Specialist

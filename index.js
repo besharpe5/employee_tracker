@@ -2,7 +2,7 @@ const { prompt } = require('inquirer');
 const db = require('./db');
 const connection = require('./db/connection');
 require('console.table');
-const logo = require('asciiart-logo');
+const appLogo = require('asciiart-logo');
 
 
 loadAppLogo();
@@ -25,7 +25,7 @@ connection.query(`SELECT * FROM role`, (err, res) => {
 
 // Display logo text then load prompts
 function loadAppLogo() {
-  const appLogoText = applogo({ 
+  const appLogoText = appLogo({ 
     name: 'Employee Tracker',
     font: 'Broadway'
    }).render();
