@@ -23,7 +23,7 @@ connection.query(`SELECT * FROM role`, (err, res) => {
   }
 });
 
-// Display logo text then load prompts
+// This will show the logo text, and then load the prompts
 function loadAppLogo() {
   const appLogoText = appLogo({ 
     name: 'Employee Tracker',
@@ -78,7 +78,7 @@ function loadPrompts() {
     }
   ]).then(res => {
     let choice = res.choice;
-    //switch function to call the appropriate function depending on user's choice
+    // this is a switch function that will call the correlating function depending on user input
     switch (choice) {
       case 'SHOW_DEPARTMENTS':
         showDepartments();
@@ -129,7 +129,7 @@ function showEmployees() {
   });
 }
 
-// Add a department (prompted to enter the name of the department and that department is added to the database)
+// This will add a new department 
 function addDepartment() {
   prompt([
     {
@@ -150,7 +150,7 @@ function addDepartment() {
   });
 }
 
-// Add a role (prompted to enter the name, salary, and department for the role and that role is added to the database)
+// This will add a new role 
 function addRole() {
   let currentDepartments = [];
   connection.query(`SELECT * FROM department`, (err, res) => {
@@ -190,7 +190,7 @@ function addRole() {
   });
 }
 
-// Add an employee (prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database)
+// This will add a new employee 
 function addEmployee() {
 
   prompt([
@@ -229,7 +229,7 @@ function addEmployee() {
   });
 }
 
-// Update an employee (prompted to select an employee to update and their new role and this information is updated in the database)
+// This will update an employee entry
 function updateEmployeeRole() {
 
   prompt([
