@@ -1,4 +1,4 @@
-USE employees;
+use employees;
 
 INSERT INTO department (name)
 VALUES
@@ -16,18 +16,18 @@ VALUES
     ("SMB Sales Representative", 55000, 1), -- 1
     ("SMB Sales Representative II", 55000, 1), -- 2
     ("Enterprise Sales Representative", 48000, 1), -- 3
-    ("Sales Manager - SMB", 75000, 1), -- 4
-    ("Sales Manager - Enterprise", 80000, 1), -- 5
+    ("Sales Manager: SMB", 75000, 1), -- 4
+    ("Sales Manager: Enterprise", 80000, 1), -- 5
     ("Social Media Manager", 45000, 2), -- 6
     ("SEO Specialist", 40000, 2), -- 7
     ("Public Relations Specialist", 42500, 2), -- 8
     ("Marketing Assistant", 38750, 2), -- 9
     ("Marketing Manager", 80000, 2), -- 10
-    ("Junior Software Developer - Front End", 65500, 3), -- 11
-    ("Junior Software Developer - Back End", 65500, 3), -- 12
-    ("Software Developer - Front End", 75500, 3), -- 13
-    ("Software Developer - Back End", 75500, 3), -- 14
-    ("Senior Software Developer - Full Stack", 92000, 3), -- 15
+    ("Junior Software Developer: Front End", 65500, 3), -- 11
+    ("Junior Software Developer: Back End", 65500, 3), -- 12
+    ("Software Developer: Front End", 75500, 3), -- 13
+    ("Software Developer: Back End", 75500, 3), -- 14
+    ("Senior Software Developer: Full Stack", 92000, 3), -- 15
     ("Engineering Manager", 110000, 3), -- 16
     ("Support Representative", 40000, 4), -- 17
     ("Support Representative II", 40000, 4), -- 18
@@ -43,10 +43,10 @@ VALUES
     ("Product Owner", 58750, 6), -- 28
     ("Product Researcher", 58750, 6), -- 29
     ("Product Manager", 95000, 6), -- 30
-    ("Account Manager - SMB", 55000, 7), -- 31
-    ("Account Manager - SMB II", 55000, 7), -- 32
-    ("Account Manager - Enterprise", 60000, 7), -- 33
-    ("Account Manager - Enterprise II", 60000, 7), -- 34
+    ("Account Manager: SMB", 55000, 7), -- 31
+    ("Account Manager: SMB II", 55000, 7), -- 32
+    ("Account Manager: Enterprise", 60000, 7), -- 33
+    ("Account Manager: Enterprise II", 60000, 7), -- 34
     ("Project Manager", 65500, 7), -- 35
     ("Project Manager II", 65000, 7), -- 36
     ("Customer Success Manager", 80000, 7), -- 37

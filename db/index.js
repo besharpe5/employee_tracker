@@ -1,5 +1,5 @@
+const res = require('express/lib/response');
 const db = require('./connection');
-const response = require('express/lib/response');
 
 class DB {
     // This will return all departments

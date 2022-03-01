@@ -1,9 +1,8 @@
 const { prompt } = require('inquirer');
 const db = require('./db');
-const connection = require('./db/connection');
 require('console.table');
 const appLogo = require('asciiart-logo');
-
+const connection = require('./db/connection');
 
 loadAppLogo();
 
@@ -16,7 +15,7 @@ connection.query(`SELECT * FROM employee`, (err, res) => {
 });
 
 let existingRoles = [];
-connection.query(`SELECT * FROM role`, (err, res) => {
+connection.query(`SELECT * FROM roles`, (err, res) => {
   if (err) throw err;
   for (let i=0; i < res.length; i++) {
     existingRoles.push({name: res[i].title, value: res[i].id});
@@ -80,13 +79,13 @@ function loadPrompts() {
     let choice = res.choice;
     // this is a switch function that will call the correlating function depending on user input
     switch (choice) {
-      case 'SHOW_DEPARTMENTS':
+      case 'VIEW_DEPARTMENTS':
         showDepartments();
         break;
-      case 'SHOW_ROLES':
+      case 'VIEW_ROLES':
         showRoles();
         break;
-      case 'SHOW_EMPLOYEES':
+      case 'VIEW_EMPLOYEES':
         showEmployees();
         break;
       case 'ADD_DEPARTMENT':
@@ -98,7 +97,7 @@ function loadPrompts() {
       case 'ADD_EMPLOYEE':
         addEmployee();
         break;
-      case 'UPDATE_EMPLOYEE_ROLE':
+      case 'UPDATE_EMPLOYEE':
         updateEmployeeRole();
         break;
       case 'QUIT':
@@ -152,7 +151,7 @@ function addDepartment() {
 
 // This will add a new role 
 function addRole() {
-  let currentDepartments = [];
+  let existingDepartments = [];
   connection.query(`SELECT * FROM department`, (err, res) => {
     if (err) throw err;
     for (let i=0; i < res.length; i++) {
@@ -180,7 +179,7 @@ function addRole() {
   ])
   .then((answer) => {
     connection.query(
-      `INSERT INTO role (title, salary, department_id)
+      `INSERT INTO roles (title, salary, department_id)
       VALUES ('${answer.newRoleName}', '${answer.newRoleSalary}', '${answer.newRoleDepartment}')`,
       (err, results) => {
         if (err) throw err;
@@ -219,7 +218,7 @@ function addEmployee() {
   ])
   .then((answer) => {
     connection.query(
-      `INSERT INTO employee (first_name, last_name, role_id, manager_id)
+      `INSERT INTO employee (first_name, last_name, roles_id, manager_id)
       VALUES ('${answer.employeeFirstName}', '${answer.employeeLastName}', '${answer.employeeRole}', '${answer.employeeManager}')`,
       (err, results) => {
         if (err) throw err;
@@ -248,7 +247,7 @@ function updateEmployeeRole() {
   ])
   .then((answer) => {
     connection.query(
-      `UPDATE employee SET role_id = '${answer.employeeRole}'
+      `UPDATE employee SET roles_id = '${answer.employeeRole}'
       WHERE id = '${answer.selectedEmployee}'`,
       (err, results) => {
         if (err) throw err;
