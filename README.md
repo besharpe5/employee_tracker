@@ -9,7 +9,7 @@
 
   ## Screenshot
 
-  ![screenshot of Employee Tracker]("img width="1122" alt="Screen Shot 2022-03-01 at 12 25 31 AM" src="https://user-images.githubusercontent.com/92644802/156110410-404f6cd5-201c-4406-9674-0daffdf3c70e.png")
+  ![screenshot of Employee Tracker](https://user-images.githubusercontent.com/92644802/156110410-404f6cd5-201c-4406-9674-0daffdf3c70e.png)
 
   ## Table of Contents
   * [Installation](#installation)
