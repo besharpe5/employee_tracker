@@ -17,7 +17,7 @@
   * [Contributing](#contributing)
   * [Questions](#questions)
   
-  ## Instalations
+  ## Instalation
   1). npm install mysql2 inquirer express console.table asciiart-logo
 
   ## License
